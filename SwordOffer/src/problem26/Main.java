@@ -1,4 +1,4 @@
-package problem25;
+package problem26;
 
 import util.TreeNode;
 import util.TreeUtil;
@@ -18,5 +18,7 @@ public class Main {
         TreeNode b = TreeUtil.ListToTree(list2);
         Solution solution = new Solution();
         System.out.println(solution.isSubStructure(a, b));
+        Solution2 solution2 = new Solution2();
+        System.out.println(solution2.isSubStructure(a, b));
     }
 }
