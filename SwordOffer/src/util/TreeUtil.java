@@ -16,12 +16,20 @@ public class TreeUtil {
         while (!treeNodeList.isEmpty()) {
             TreeNode node = treeNodeList.removeFirst();
             if (i < list.size()) {
-                TreeNode left = new TreeNode(list.get(i++));
+                Integer integer =  list.get(i++);
+                TreeNode left = null;
+                if (integer != null) {
+                    left = new TreeNode(integer);
+                }
                 node.left = left;
                 treeNodeList.add(left);
             }
             if (i < list.size()) {
-                TreeNode right = new TreeNode(list.get(i++));
+                Integer integer =  list.get(i++);
+                TreeNode right = null;
+                if (integer != null) {
+                    right = new TreeNode(integer);
+                }
                 treeNodeList.add(right);
                 node.right = right;
             }
