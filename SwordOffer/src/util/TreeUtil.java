@@ -15,6 +15,9 @@ public class TreeUtil {
         treeNodeList.add(root);
         while (!treeNodeList.isEmpty()) {
             TreeNode node = treeNodeList.removeFirst();
+            if (node == null) {
+                continue;
+            }
             if (i < list.size()) {
                 Integer integer =  list.get(i++);
                 TreeNode left = null;
