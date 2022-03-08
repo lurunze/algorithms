@@ -23,16 +23,15 @@ public class Solution3 {
             cur = cur.next.next;
         }
 
-        Node res = head.next;
-        cur = head.next;
-        Node pre = head;
-        while (cur.next != null) {
+        Node newHead = head.next;
+        Node pre = new Node(0);
+        cur = head;
+        while (cur != null) {
             pre.next = cur.next;
-            cur.next = cur.next.next;
-            pre = pre.next;
+            cur.next = pre.next.next;
             cur = cur.next;
+            pre = pre.next;
         }
-        pre.next = null;
-        return res;
+        return newHead;
     }
 }
